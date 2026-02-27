@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shah Mahek | Advocate</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    background:#111;
+    font-family:'Poppins',sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.card{
+    width:360px;
+    height:520px;
+    perspective:1000px;
+}
+
+.inner{
+    width:100%;
+    height:100%;
+    position:relative;
+    transition:transform 0.8s;
+    transform-style:preserve-3d;
+}
+
+.inner.flip{
+    transform:rotateY(180deg);
+}
+
+.front, .back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:15px;
+    backface-visibility:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,0.5);
+    overflow:hidden;
+}
+
+/* FRONT SIDE */
+.front{
+    background:#000;
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.front h1{
+    font-family:'Playfair Display',serif;
+    font-size:24px;
+    margin:0;
+    letter-spacing:1px;
+}
+
+.front h2{
+    font-size:14px;
+    letter-spacing:3px;
+    margin-top:10px;
+}
+
+.front small{
+    margin-top:15px;
+    color:gray;
+}
+
+/* BACK SIDE */
+.back{
+    background:#fff;
+    color:#000;
+    transform:rotateY(180deg);
+    padding:25px;
+    box-sizing:border-box;
+    overflow-y:auto;
+}
+
+.back h3{
+    margin-top:0;
+    font-family:'Playfair Display',serif;
+}
+
+.info{
+    margin-bottom:12px;
+    font-size:14px;
+}
+
+a{
+    text-decoration:none;
+    color:black;
+}
+
+.button{
+    display:block;
+    margin-top:10px;
+    padding:10px;
+    text-align:center;
+    border-radius:6px;
+    font-weight:500;
+}
+
+.call-btn{
+    background:black;
+    color:white;
+}
+
+.whatsapp-btn{
+    background:#25D366;
+    color:white;
+}
+
+.email-btn{
+    background:#444;
+    color:white;
+}
+
+.note{
+    font-size:12px;
+    color:gray;
+    margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card" onclick="flipCard()">
+    <div class="inner" id="cardInner">
+
+        <!-- FRONT -->
+        <div class="front">
+            <h1>SHAH MAHEK</h1>
+            <h2>ADVOCATE</h2>
+            <small>(Tap to flip)</small>
+        </div>
+
+        <!-- BACK -->
+        <div class="back">
+
+            <h3>SHAH MAHEK</h3>
+            <div class="info"><strong>Advocate</strong></div>
+
+            <hr>
+
+            <div class="info">
+                📍 <a href="https://maps.app.goo.gl/WL5qneoiymb6cc4eA" target="_blank">
+                Office Address</a>
+            </div>
+
+            <div class="info">
+                🏠 <a href="https://maps.app.goo.gl/SkoedJ32FtMqyDLa8" target="_blank">
+                Residential Address</a>
+            </div>
+
+            <hr>
+
+            <div class="info">
+                📞 <a href="tel:8688383091">8688383091</a>
+            </div>
+
+            <div class="info">
+                🟢 <a href="https://wa.me/918688383091" target="_blank">
+                WhatsApp Chat</a>
+            </div>
+
+            <div class="info">
+                📧 <a href="mailto:mahekshahadv@gmail.com">
+                mahekshahadv@gmail.com</a>
+            </div>
+
+            <a class="button call-btn" href="tel:8688383091">
+                📞 Call Now
+            </a>
+
+            <a class="button whatsapp-btn" href="https://wa.me/918688383091" target="_blank">
+                🟢 WhatsApp
+            </a>
+
+            <a class="button email-btn" href="mailto:mahekshahadv@gmail.com">
+                📧 Send Email
+            </a>
+
+            <div class="note">
+                (Tap anywhere to flip back)
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script>
+function flipCard(){
+    document.getElementById("cardInner").classList.toggle("flip");
+}
+</script>
+
+</body>
+</html>
