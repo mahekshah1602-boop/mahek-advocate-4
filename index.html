@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
+
 body{
     margin:0;
     background:#111;
@@ -18,9 +19,10 @@ body{
     height:100vh;
 }
 
+/* Card Container */
 .card{
-    width:360px;
-    height:520px;
+    width:370px;
+    height:540px;
     perspective:1000px;
 }
 
@@ -42,20 +44,25 @@ body{
     height:100%;
     border-radius:15px;
     backface-visibility:hidden;
-    box-shadow:0 15px 40px rgba(0,0,0,0.5);
-    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,0.6);
+    padding:25px;
+    box-sizing:border-box;
 }
 
 /* FRONT SIDE */
 .front{
     background:#000;
     color:#fff;
+    text-align:center;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    text-align:center;
-    padding:20px;
+}
+
+.logo{
+    width:90px;
+    margin-bottom:20px;
 }
 
 .front h1{
@@ -71,8 +78,9 @@ body{
     margin-top:10px;
 }
 
-.front small{
-    margin-top:15px;
+.tap-note{
+    margin-top:20px;
+    font-size:12px;
     color:gray;
 }
 
@@ -81,8 +89,6 @@ body{
     background:#fff;
     color:#000;
     transform:rotateY(180deg);
-    padding:25px;
-    box-sizing:border-box;
     overflow-y:auto;
 }
 
@@ -92,8 +98,9 @@ body{
 }
 
 .info{
-    margin-bottom:12px;
+    margin-bottom:14px;
     font-size:14px;
+    line-height:1.5;
 }
 
 a{
@@ -103,7 +110,7 @@ a{
 
 .button{
     display:block;
-    margin-top:10px;
+    margin-top:12px;
     padding:10px;
     text-align:center;
     border-radius:6px;
@@ -130,6 +137,7 @@ a{
     color:gray;
     margin-top:10px;
 }
+
 </style>
 </head>
 
@@ -138,15 +146,19 @@ a{
 <div class="card" onclick="flipCard()">
     <div class="inner" id="cardInner">
 
-        <!-- FRONT -->
+        <!-- FRONT SIDE -->
         <div class="front">
+
             <img src="logo.png" class="logo" alt="Advocate Logo">
+
             <h1>SHAH MAHEK</h1>
             <h2>ADVOCATE</h2>
-            <small>(Tap to flip)</small>
+
+            <div class="tap-note">(Tap to flip)</div>
+
         </div>
 
-        <!-- BACK -->
+        <!-- BACK SIDE -->
         <div class="back">
 
             <h3>SHAH MAHEK</h3>
@@ -155,13 +167,23 @@ a{
             <hr>
 
             <div class="info">
-                📍 <a href="https://maps.app.goo.gl/WL5qneoiymb6cc4eA" target="_blank">
-                Office Address</a>
+                📍 <strong>Office Address:</strong><br>
+                <a href="https://maps.app.goo.gl/WL5qneoiymb6cc4eA" target="_blank">
+                #24, H.No.: 4-3-72/1/27,<br>
+                T.L. Kapadia Apartments,<br>
+                K.S. Lane, Sultan Bazar,<br>
+                Hyderabad-500 001 (T.S)
+                </a>
             </div>
 
             <div class="info">
-                🏠 <a href="https://maps.app.goo.gl/SkoedJ32FtMqyDLa8" target="_blank">
-                Residential Address</a>
+                🏠 <strong>Residential Address:</strong><br>
+                <a href="https://maps.app.goo.gl/SkoedJ32FtMqyDLa8" target="_blank">
+                H. No.: 2-6-497/1/P121NP,<br>
+                Arihant Nivas, Road No. 2,<br>
+                Narsimha Swami Colony, Nagole,<br>
+                Hyderabad-500 068 (T.S)
+                </a>
             </div>
 
             <hr>
@@ -172,12 +194,14 @@ a{
 
             <div class="info">
                 🟢 <a href="https://wa.me/918688383091" target="_blank">
-                WhatsApp Chat</a>
+                WhatsApp Chat
+                </a>
             </div>
 
             <div class="info">
                 📧 <a href="mailto:mahekshahadv@gmail.com">
-                mahekshahadv@gmail.com</a>
+                mahekshahadv@gmail.com
+                </a>
             </div>
 
             <a class="button call-btn" href="tel:8688383091">
@@ -192,9 +216,7 @@ a{
                 📧 Send Email
             </a>
 
-            <div class="note">
-                (Tap anywhere to flip back)
-            </div>
+            <div class="note">(Tap anywhere to flip back)</div>
 
         </div>
 
